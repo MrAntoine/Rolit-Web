@@ -9,6 +9,14 @@
 	font-weight: bolder;
 }
 
+#test {
+	background-image: url("images/plateau.png");
+	background-color: red;
+	/*background-size: 300px 300px;*/
+
+}
+
+/*
 #case1 {
 	background-color: red;
 	position:absolute;
@@ -16,10 +24,10 @@
 	width:108px;
 	left:178px;
 	top:78px;
-	/*visibility:hidden;*/
-	z-index:1
-}
+	/*visibility:hidden;
+}*/
 
+/*
 #case2{
 
 
@@ -28,7 +36,7 @@ background:#bfd70e;
   width:160px;
   height:160px;
   border:2px solid #679403;
-}
+}*/
 
 #playjoueur {
 	text-align: center;
