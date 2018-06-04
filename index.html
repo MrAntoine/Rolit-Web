@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Le jeu du Rolit</title>
+    <!-- titre -->
+    <meta charset="UTF-8">
+    <!-- utf8 est l'encodage des caracteres -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="contenu clearfix">
+        <div id="header">
+            <div id="logo">
+                <img src="images/logo.png" alt="Logo_page" />
+            </div>
+
+            <div id="titre">Le jeu du pendu</div>
+
+            <div id="frise">
+
+            </div>
+
+
+        </div>
+
+
+        <div id="mot_cache">
+
+            <div id="champ_cache0">
+                <input type="text" id="cache0" />
+            </div>
+            <div id="champ_cache1">
+                <input type="text" id="cache1" />
+            </div>
+            <div id="champ_cache2">
+                <input type="text" id="cache2" />
+            </div>
+            <div id="champ_cache3">
+                <input type="text" id="cache3" />
+            </div>
+            <div id="champ_cache4">
+                <input type="text" id="cache4" />
+            </div>
+            <div id="champ_cache5">
+                <input type="text" id="cache5" />
+            </div>
+
+        </div>
+
+        <div id="mot_devine">
+
+            <div id="champ_devine0">
+                <input type="text" id="devine0" value="_" maxlength="1" />
+            </div>
+            <div id="champ_devine1">
+                <input type="text" id="devine1" value="_" maxlength="1" />
+            </div>
+            <div id="champ_devine2">
+                <input type="text" id="devine2" value="_" maxlength="1" />
+            </div>
+            <div id="champ_devine3">
+                <input type="text" id="devine3" value="_" maxlength="1" />
+            </div>
+            <div id="champ_devine4">
+                <input type="text" id="devine4" value="_" maxlength="1" />
+            </div>
+            <div id="champ_devine5">
+                <input type="text" id="devine5" value="_" maxlength="1" />
+            </div>
+
+
+        </div>
+
+        <div id="clavier">
+            <input type="hidden" value="" id="text_cache" />
+
+            <!---1ere ligne clavier-->
+            <div id="ligne1">
+                <input type="button" value="1" id="lettre1" onclick="propose(this.value);">
+                <input type="button" value="2" id="lettre2" onclick="propose(this.value);">
+                <input type="button" value="3" id="lettre3" onclick="propose(this.value);">
+                <input type="button" value="4" id="lettre4" onclick="propose(this.value);">
+                <input type="button" value="5" id="lettre5" onclick="propose(this.value);">
+                <input type="button" value="6" id="lettre6" onclick="propose(this.value);">
+                <input type="button" value="7" id="lettre7" onclick="propose(this.value);">
+                <input type="button" value="8" id="lettre8" onclick="propose(this.value);">
+                <input type="button" value="9" id="lettre9" onclick="propose(this.value);">
+                <input type="button" value="0" id="lettre0" onclick="propose(this.value);">
+                <input type="button" value=")" id="lettre)" onclick="propose(this.value);">
+                <input type="button" value="=" id="lettre=" onclick="propose(this.value);">
+
+
+
+
+            </div>
+            <!---2éme ligne clavier-->
+            <div id="ligne2">
+                <input type="button" onclick="propose(this.value);" value="A" id="lettreA">
+                <input type="button" onclick="propose(this.value);" value="Z" id="lettreZ">
+                <input type="button" onclick="propose(this.value);" value="E" id="lettreE">
+                <input type="button" onclick="propose(this.value);" value="R" id="lettreR">
+                <input type="button" onclick="propose(this.value);" value="T" id="lettreT">
+                <input type="button" onclick="propose(this.value);" value="Y" id="lettreY">
+                <input type="button" onclick="propose(this.value);" value="U" id="lettreU">
+                <input type="button" onclick="propose(this.value);" value="I" id="lettreI">
+                <input type="button" onclick="propose(this.value);" value="O" id="lettreO">
+                <input type="button" onclick="propose(this.value);" value="P" id="lettreP">
+                <input type="button" onclick="propose(this.value);" value="^" id="lettre^">
+
+
+
+            </div>
+            <!---3éme ligne clavier-->
+            <div id="ligne3">
+                <input type="button" onclick="propose(this.value);" value="Q" id="lettreQ">
+                <input type="button" onclick="propose(this.value);" value="S" id="lettreS">
+                <input type="button" onclick="propose(this.value);" value="D" id="lettreD">
+                <input type="button" onclick="propose(this.value);" value="F" id="lettreF">
+                <input type="button" onclick="propose(this.value);" value="G" id="lettreG">
+                <input type="button" onclick="propose(this.value);" value="H" id="lettreH">
+                <input type="button" onclick="propose(this.value);" value="J" id="lettreJ">
+                <input type="button" onclick="propose(this.value);" value="K" id="lettreK">
+                <input type="button" onclick="propose(this.value);" value="L" id="lettreL">
+                <input type="button" onclick="propose(this.value);" value="M" id="lettreM">
+
+
+            </div>
+            <!---4éme ligne clavier-->
+            <div id="ligne4">
+                <input type="button" onclick="propose(this.value);" value="W" id="lettreW">
+                <input type="button" onclick="propose(this.value);" value="X" id="lettreX">
+                <input type="button" onclick="propose(this.value);" value="C" id="lettreC">
+                <input type="button" onclick="propose(this.value);" value="V" id="lettreV">
+                <input type="button" onclick="propose(this.value);" value="B" id="lettreB">
+                <input type="button" onclick="propose(this.value);" value="N" id="lettreN">
+                <input type="button" onclick="propose(this.value);" value="," id="lettre,">
+                <input type="button" onclick="propose(this.value);" value=";" id="lettre;">
+                <input type="button" onclick="propose(this.value);" value=":" id="lettre:">
+
+
+            </div>
+
+
+        </div>
+
+        <div id="dessin">
+            <img src="images/pendu_0.png" id="image0" alt="image0" height="300px" width="200px" />
+
+            <div class="images">
+                <img src="images/pendu_1.png" id="image1" alt="image1" height="300px" width="200px" />
+                <img src="images/pendu_2.png" id="image2" alt="image2" height="300px" width="200px" />
+                <img src="images/pendu_3.png" id="image3" alt="image3" height="300px" width="200px" />
+                <img src="images/pendu_4.png" id="image4" alt="image4" height="300px" width="200px" />
+                <img src="images/pendu_5.png" id="image5" alt="image5" height="300px" width="200px" />
+                <img src="images/pendu_6.png" id="image6" alt="image6" height="300px" width="200px" />
+                <img src="images/pendu_10.png" id="image7" alt="image7" height="300px" width="200px" />
+            </div>
+
+        </div>
+
+        <div id="footer">
+
+            <div id="footer_text">Votre proposition ? </div>
+            <div id="bouton_footer">
+                <input type="button" onclick="reload();" value="Autre partie ?" id="boutonf">
+            </div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="js/script.js">
+
+
+    </script>
+</body>
+
+
+
+</html>
