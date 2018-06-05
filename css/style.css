@@ -9,11 +9,34 @@
 	font-weight: bolder;
 }
 
-#test {
-	background-image: url("images/plateau.png");
-	background-color: red;
+#plateau {
+	background-image: url("../images/plateau.png");
+	text-align: center;
+	width:650px;
+	height:650px;
+	position: absolute;
+	margin-left: 30%;
+	/*background-color: red;*/
 	/*background-size: 300px 300px;*/
 
+}
+
+
+.grille {
+	padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 33.7%;
+}
+
+.grille div div {
+	width:40px;
+	height:40px;
+	background-color: blue;
+	display:inline-block;
+	position: relative;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 12px;
 }
 
 /*
