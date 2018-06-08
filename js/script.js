@@ -40,5 +40,5 @@ if(recupjoueur == "Rouge"){
 
 
 function Clique() {
-	
+	alert ("test");
 }
