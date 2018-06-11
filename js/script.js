@@ -28,6 +28,9 @@ if(recupjoueur == "Rouge"){
 
 
 
+
+
+
 function Clique(test) {
 	alert (test.id);
 	test.style.backgroundColor = couleur;
@@ -38,6 +41,8 @@ function Clique(test) {
 
 
 
+
+/*
 if (test.value == ""){
 	alert ("la case est pleine");
 
@@ -47,13 +52,12 @@ if (test.value == ""){
 for(i=1; i<9; i++){
 
 }
-var cc = test.value;
-cc = cc +1*1;
-alert(cc);
+
 test = test+ 1;
 alert (test.id);
 
 
+if(jeu[0]*jeu[1]*jeu[2]==8 */
 
 }
 
