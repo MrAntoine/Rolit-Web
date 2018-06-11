@@ -28,9 +28,6 @@ if(recupjoueur == "Rouge"){
 
 
 
-
-
-
 function Clique(test) {
 	alert (test.id);
 	test.style.backgroundColor = couleur;
@@ -40,7 +37,9 @@ function Clique(test) {
 
 
 
-
+if ((test && test+2 == "Rouge") && test +1 != "Rouge"){
+	alert("validé");
+}
 
 /*
 if (test.value == ""){
