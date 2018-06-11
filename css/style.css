@@ -31,7 +31,7 @@
 .grille div div {
 	width:40px;
 	height:40px;
-	background-color: blue;
+	background-color: black;
 	display:inline-block;
 	position: relative;
 	margin-left:auto;
