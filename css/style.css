@@ -1,33 +1,28 @@
 #titre {
 	text-align : center;
 }
-
 #footer_text {
 	background-color: grey;
 	text-align: center;
 	padding: 20px;
 	font-weight: bolder;
 }
-
 #plateau {
-	background-image: url("../images/plateau.png");
 	text-align: center;
-	width:650px;
-	height:650px;
-	position: absolute;
-	margin-left: 30%;
+	width:900px;
+	height:900px;
+	margin-left: auto;
+    margin-right:auto;
+    display:block;
+    position: relative;
 	/*background-color: red;*/
 	/*background-size: 300px 300px;*/
-
 }
-
-
 .grille {
+    margin-top:-650px;
 	padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 33.7%;
 }
-
 .grille div div {
 	width:40px;
 	height:40px;
@@ -38,7 +33,6 @@
 	margin-right:auto;
 	padding: 12px;
 }
-
 /*
 #case1 {
 	background-color: red;
@@ -60,7 +54,6 @@ background:#bfd70e;
   height:160px;
   border:2px solid #679403;
 }*/
-
 #playjoueur {
 	text-align: center;
 	color: white;
