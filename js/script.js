@@ -9,16 +9,20 @@ var recupjoueur = joueurscouleur[genjoueur];
 /*
 switch (true) {
     case recupjoueur == "Rouge":
-    	var doc = document.write("<div id='playjoueur1' style='position:absolute;background:red;border-radius:50%;width:30px;height:30px'></div>");
+    	//var doc = document.write("<div id='playjoueur1' style='position:absolute;background:red;border-radius:50%;width:30px;height:30px'></div>");
+    	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
         break;
     case recupjoueur == "Bleu":
-    	var doc = document.write("<div id='playjoueur1' style='position:absolute;background:blue;border-radius:50%;width:30px;height:30px'></div>");
+    	//var doc = document.write("<div id='playjoueur1' style='position:absolute;background:blue;border-radius:50%;width:30px;height:30px'></div>");
+    	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
         break;
     case recupjoueur == "Vert":
-    	var doc = document.write("<div id='playjoueur1' style='position:absolute;background:green;border-radius:50%;width:30px;height:30px'></div>");
+    	//var doc = document.write("<div id='playjoueur1' style='position:absolute;background:green;border-radius:50%;width:30px;height:30px'></div>");
+    	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
         break;
     case recupjoueur == "Jaune":
-    	var doc = document.write("<div id='playjoueur1' style='position:absolute;background:#bfd70e;border-radius:50%;width:30px;height:30px'></div>");
+    	//var doc = document.write("<div id='playjoueur1' style='position:absolute;background:#bfd70e;border-radius:50%;width:30px;height:30px'></div>");
+    	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
         break;                  
 
 }
