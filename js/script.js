@@ -6,43 +6,58 @@ var genjoueur = Math.floor(Math.random() * joueurscouleur.length);
 var recupjoueur = joueurscouleur[genjoueur];
 
 
-/*
-switch (true) {
-    case recupjoueur == "Rouge":
-    	//var doc = document.write("<div id='playjoueur1' style='position:absolute;background:red;border-radius:50%;width:30px;height:30px'></div>");
-    	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
-        break;
-    case recupjoueur == "Bleu":
-    	//var doc = document.write("<div id='playjoueur1' style='position:absolute;background:blue;border-radius:50%;width:30px;height:30px'></div>");
-    	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
-        break;
-    case recupjoueur == "Vert":
-    	//var doc = document.write("<div id='playjoueur1' style='position:absolute;background:green;border-radius:50%;width:30px;height:30px'></div>");
-    	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
-        break;
-    case recupjoueur == "Jaune":
-    	//var doc = document.write("<div id='playjoueur1' style='position:absolute;background:#bfd70e;border-radius:50%;width:30px;height:30px'></div>");
-    	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
-        break;                  
 
-}
-*/
 
-//document.getElementById("playjoueur").innerHTML = "C'est au tour de " + recupjoueur ;
+
 
 
 if(recupjoueur == "Rouge"){
-	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';	
+	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
+	var couleur = "red";	
 }else if (recupjoueur == "Bleu"){
-	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_bleu.png")';	
+	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_bleu.png")';
+	couleur = "blue";	
 }else if (recupjoueur == "Jaune"){
 	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_jaune.png")';	
+	couleur = "yellow";
 }else {
 	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_vert.png")';	
+	couleur = "green";
 }
 
 
 
-function Clique() {
-	alert ("test");
+
+function Clique(test) {
+	alert (test.id);
+	test.style.backgroundColor = couleur;
+	test.style.pointerEvents = "none";
+
+
+
+
+
+if ((test && test+2 == "Rouge") && test +1 != "Rouge"){
+	alert("validé");
 }
+
+/*
+if (test.value == ""){
+	alert ("la case est pleine");
+
+}
+
+
+for(i=1; i<9; i++){
+
+}
+
+test = test+ 1;
+alert (test.id);
+
+
+if(jeu[0]*jeu[1]*jeu[2]==8 */
+
+}
+
+
