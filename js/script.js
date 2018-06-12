@@ -25,13 +25,15 @@ if(recupjoueur == "Rouge"){
 	couleur = "green";
 }
 
-
+var caseremplie = 0;
 
 
 function Clique(test) {
 	alert (test.id);
 	test.style.backgroundColor = couleur;
 	test.style.pointerEvents = "none";
+	caseremplie = caseremplie + 1;
+
 
 
 
@@ -41,23 +43,41 @@ if ((test && test+2 == "Rouge") && test +1 != "Rouge"){
 	alert("validé");
 }
 
-/*
-if (test.value == ""){
-	alert ("la case est pleine");
+
+
+
+// controle de la position  vas pas 
+if("case"+x < "test.id" && test.id+1 > test.id){
+	alert("pos ok");
+}
+
+//document.getElementById("case3").style.backgroundColor = couleur; // fonctionne 
+
+
+// fin du jeu quand toutes les cases sont remplies
+
+if(caseremplie >= 64){
+		alert("jeu terminé");
+		for (var z=1; z<65; z++){
+		document.getElementById("case"+z).style.pointerEvents = "none";
+		}
+	}else {
+		console.log("jeu incomplet");
+	}
+
+
+
+
 
 }
 
 
-for(i=1; i<9; i++){
-
-}
-
-test = test+ 1;
-alert (test.id);
+	
 
 
-if(jeu[0]*jeu[1]*jeu[2]==8 */
 
-}
+
+
+
 
 

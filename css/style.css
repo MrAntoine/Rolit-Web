@@ -1,6 +1,5 @@
 #titre {
 	text-align : center;
-    font-size: 120px;
 }
 #footer_text {
 	background-color: grey;
@@ -10,9 +9,8 @@
 }
 #plateau {
 	text-align: center;
-	width:2000px;
-	height:2000px;
-    margin-top:-250px;
+	width:900px;
+	height:900px;
 	margin-left: auto;
     margin-right:auto;
     display:block;
@@ -21,7 +19,7 @@
 	/*background-size: 300px 300px;*/
 }
 .grille {
-    margin-top:-1620px;
+    margin-top:-650px;
 	padding-top: 50px;
     padding-bottom: 50px;
 }
