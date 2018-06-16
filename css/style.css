@@ -9,8 +9,6 @@
 }
 #plateau {
 	text-align: center;
-	width:900px;
-	height:900px;
 	margin-left: auto;
     margin-right:auto;
     display:block;
@@ -19,20 +17,23 @@
 	/*background-size: 300px 300px;*/
 }
 .grille {
-   /* margin-top:-650px; */
-	padding-top: 50px;
+	padding-top: 60px; 
     padding-bottom: 50px;
+    margin-bottom:650px;
+    margin-top: -605px;
+    margin-left:auto;
+    margin-right: auto;
 }
 .grille div div {
-	width:40px;
-	height:40px;
+	width:30px;
+	height:30px;
 	background-color: black;
 	display:inline-block;
 	position: relative;
 	margin-left:auto;
 	margin-right:auto;
 	padding: 12px;
-	/*z-index: -1;*/
+	z-index: -1;
 }
 /*
 #case1 {
