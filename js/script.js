@@ -36,8 +36,8 @@ function Clique(test) {
 
 
 
-
-
+var y = document.getElementById("colonne"+ o);
+var x = document.getElementById("case"+ p);
 
 if ((test && test+2 == "Rouge") && test +1 != "Rouge"){
 	alert("validé");
