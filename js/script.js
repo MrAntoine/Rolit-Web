@@ -7,10 +7,6 @@ var recupjoueur = joueurscouleur[genjoueur];
 
 
 
-
-
-
-
 if(recupjoueur == "Rouge"){
 	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
 	var couleur = "red";	
@@ -24,6 +20,9 @@ if(recupjoueur == "Rouge"){
 	document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_vert.png")';	
 	couleur = "green";
 }
+
+
+
 
 var caseremplie = 0;
 
@@ -39,6 +38,9 @@ function Clique(test) {
 var y = document.getElementById("colonne"+ o);
 var x = document.getElementById("case"+ p);
 
+
+
+
 if ((test && test+2 == "Rouge") && test +1 != "Rouge"){
 	alert("validé");
 }
@@ -51,7 +53,12 @@ if("case"+x < "test.id" && test.id+1 > test.id){
 	alert("pos ok");
 }
 
+
+
 //document.getElementById("case3").style.backgroundColor = couleur; // fonctionne 
+
+
+
 
 
 // fin du jeu quand toutes les cases sont remplies
