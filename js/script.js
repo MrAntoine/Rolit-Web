@@ -35,13 +35,13 @@ function Clique(test) {
 
 
 
-var y = document.getElementById("colonne"+ o);
+//var y = document.getElementById("colonne"+ o);
 var x = document.getElementById("case"+ p);
 
 
 
 
-if ((test && test+2 == "Rouge") && test +1 != "Rouge"){
+if ((test && test+(x+2) == "Rouge") && test +(x+1) != "Rouge"){
 	alert("validé");
 }
 
@@ -49,7 +49,7 @@ if ((test && test+2 == "Rouge") && test +1 != "Rouge"){
 
 
 // controle de la position  vas pas 
-if("case"+x < "test.id" && test.id+1 > test.id){
+if("case"+m < "test.id" && test.id+1 > test.id){
 	alert("pos ok");
 }
 
