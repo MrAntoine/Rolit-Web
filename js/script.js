@@ -179,15 +179,12 @@ function Clique(nb) {
                     }
                 }
 
-        
-
-            
 
 
-
-
+/*
         // On gère en haut et en bas
-               /*if (plateau[nb][0].substring(2) <7 && plateau[nb][0].substring(2) >2){ //(vérifie pour pas dépasser les 8 lignes)
+               //if (plateau[nb][0].substring(2) <7 && plateau[nb][0].substring(2) >2){ //(vérifie pour pas dépasser les 8 lignes)
+                if (nb>2&& nb<7){  
                   alert("ok");
                     if(plateau[nb+0.2][1] == recupJoueur){ 
                       plateau[nb+0.1][1] = recupJoueur;
@@ -198,9 +195,9 @@ function Clique(nb) {
                       plateau[nb-0.1][1] = recupJoueur;
                       caseRemplie++;
                     }
-                }*/
+                }
 
-
+*/
 
         
         // On change la couleur des cases
