@@ -259,26 +259,26 @@ function changerJoueur(ancien){
     
     if(recupJoueur == ROUGE){
         
-        document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';
-        var couleur = "red";	
+        document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_bleu.png")';
+        var couleur = "blue";	
         recupJoueur = ancien+1;
         
     }else if (recupJoueur == BLEU){
         
-        document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_bleu.png")';
-        couleur = "blue";	
+        document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_vert.png")';
+        couleur = "green";	
         recupJoueur = ancien+1;
         
     }else if (recupJoueur == JAUNE){
         
-        document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_jaune.png")';	
-        couleur = "yellow";
+        document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_rouge.png")';	
+        couleur = "red";
         recupJoueur = 1;
         
     } else {
         
-        document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_vert.png")';	
-        couleur = "green";
+        document.getElementById("playjoueur2").style.backgroundImage = 'url("images/pion_jaune.png")';	
+        couleur = "yellow";
         recupJoueur = ancien+1;
         
     }
