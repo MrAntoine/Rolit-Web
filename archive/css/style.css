@@ -1,0 +1,78 @@
+#titre {
+	text-align : center;
+}
+#footer_text {
+	background-color: grey;
+	text-align: center;
+	padding: 20px;
+	font-weight: bolder;
+}
+#plateau {
+	text-align: center;
+	margin-left: auto;
+    margin-right:auto;
+    display:block;
+    position: relative;
+	/*background-color: red;*/
+	/*background-size: 300px 300px;*/
+}
+.grille {
+	padding-top: 60px; 
+    padding-bottom: 50px;
+    margin-bottom:650px;
+    margin-top: -605px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.grille div div {
+	width:30px;
+	height:30px;
+	background-color: black;
+	display:inline-block;
+	position: relative;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 12px;
+	z-index: -1;
+}
+/*
+#case1 {
+	background-color: red;
+	position:absolute;
+	height:104px;
+	width:108px;
+	left:178px;
+	top:78px;
+	/*visibility:hidden;
+}*/
+
+/*
+#case2{
+
+
+background:#bfd70e;
+  border-radius:50%;
+  width:160px;
+  height:160px;
+  border:2px solid #679403;
+}*/
+#playjoueur {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	background-color: black;
+	padding: 20px;
+	width: auto;
+	margin-right: 40%;
+    margin-left: 40%;
+}
+#playjoueur2{
+	border-radius:50%;
+	width:30px;
+	height:30px;
+	position: absolute;
+    display: inline-block;
+    margin-top: -5px;
+    margin-left: 10px;
+    background-size: 30px 30px;
+}
