@@ -165,8 +165,12 @@ function Clique(nb) {
                 
         */
 
+
+
+
          // On gère à droite et à gauche
-                if (nb>2 && nb<7){ //(vérifie pour pas dépasser les 8 colonnes)
+                for(var i=1 ; i <9; i++){
+                //if (nb>2 && nb<7){ //(vérifie pour pas dépasser les 8 colonnes)
 
                     if(plateau[nb+2][1] == recupJoueur){ 
                       plateau[nb+1][1] = recupJoueur;
@@ -177,15 +181,20 @@ function Clique(nb) {
                       plateau[nb-1][1] = recupJoueur;
                       caseRemplie++;
                     }
-                }
+                //}
+
+              }
 
 
 
-/*
+
         // On gère en haut et en bas
+
+           for(var j=1 ; j <9; j++){
                //if (plateau[nb][0].substring(2) <7 && plateau[nb][0].substring(2) >2){ //(vérifie pour pas dépasser les 8 lignes)
-                if (nb>2&& nb<7){  
-                  alert("ok");
+                //if (nb>2&& nb<7){  
+                 // alert("ok");
+
                     if(plateau[nb+0.2][1] == recupJoueur){ 
                       plateau[nb+0.1][1] = recupJoueur;
                       caseRemplie++;
@@ -197,7 +206,8 @@ function Clique(nb) {
                     }
                 }
 
-*/
+              }
+
 
         
         // On change la couleur des cases
@@ -206,7 +216,6 @@ function Clique(nb) {
         // On change de joueur
         changerJoueur(recupJoueur);
         
-    }
     
 }
 
