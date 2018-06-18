@@ -119,102 +119,225 @@ function debuter() {
     }
     
     mettreAJour();
-    alert("initialisation");
+  //  alert("initialisation");
 }
 
 
 /** Gestion du clique sur une case **/
 function Clique(nb) {
     
-  alert(plateau[nb] + "+" +nb);
+ alert(plateau[nb] + "+" +nb);
 
     // si la case est vide
     if(plateau[nb][1] == RIEN) {
-        
-        // La case devient de la couleur du joueur
-        plateau[nb][1] = recupJoueur;
-        
-        // On ajoute une case remplie
-        caseRemplie++;
+           
+      
+    var peutjouer = "OUI";  
 
-        // On desactive la case
-        document.getElementById("case"+nb).style.pointerEvents = "none";
-        
-        /* 
-            On vérifie s'il y a d'autres cases à changer : 
-                
-                Si (nb.substring(2)<7 && nb.substring(2)>2)  (vérifie pour pas dépasser les 8 lignes)
-                
-                    Si nb+0.2 == recupJoueur
-                        Alors nb+0.1 = recupJoueur;
-                        caseRemplie++;
-                        
-                    Si nb-0.2 == recupJoueur
-                        Alors nb-0.1 = recupJoueur;
-                        caseRemplie++;
-                        
-                        
-                // On gère les diagonales (vérifie pour pas dépasser les 8 lignes et les 8 colonnes)
-                    
-                Si (nb<7 && nb.substring(2)>2)  
-                    Si nb+2-0.2 == recupJoueur
-                        Alors nb-1+0.1 = recupJoueur;
-                        caseRemplie++;
-                    
-                [...]
-                
-        */
+    // Verification qu'on joue a coter d'un autre pion.
+
+//ligne gauche
+
+if((nb == 1)||(nb == 9)||(nb == 17)||(nb == 25)||(nb == 33)||(nb == 41)||(nb == 49)||(nb == 57)){
+
+    if(plateau[nb+1][1] == RIEN){
+      peutjouer = "NON";
+      alert("peux pas jouer");
+    }
+
+}
+
+//ligne gauche 2 
+if((nb == 42)||(nb == 34)||(nb == 26)||(nb == 18)){
+
+    if(plateau[nb+1][1] == RIEN){
+      peutjouer = "NON";
+      alert("peux pas jouer");
+    }else if(plateau[nb-1][1] == RIEN){
+      peutjouer = "NON";
+      alert("peux pas jouer");
+    }
+
+}
+
+// ligne droite
+
+if((nb == 8)||(nb == 16)||(nb == 24)||(nb == 32)||(nb == 40)||(nb == 48)||(nb == 56)||(nb == 64)){
+
+     if(plateau[nb-1][1] == RIEN){
+      var peutjouer = "NON";
+      alert("peux pas jouer");
+    }
+
+}
+
+// ligne droite 2
+
+if((nb == 23)||(nb == 31)||(nb == 39)||(nb == 47)){
+
+     if(plateau[nb-1][1] == RIEN){
+      var peutjouer = "NON";
+      alert("peux pas jouer");
+    }else if(plateau[nb+1][1] == RIEN){
+      var peutjouer = "NON";
+      alert("peux pas jouer");
+    }
+
+}
+
+// ligne haut
+
+if((nb == 2)||(nb == 3)||(nb == 4)||(nb == 5)||(nb == 6)||(nb == 7)){
+
+ if(plateau[nb+8][1] == RIEN){
+      var peutjouer = "NON";
+      alert("peux pas jouer");
+    }
+}
+
+// ligne haut 2
+
+if((nb == 10)||(nb == 11)||(nb == 12)||(nb == 13)||(nb == 14)||(nb == 15)){
+
+ if((plateau[nb+8][1] == RIEN) && (plateau[nb-8][1] == RIEN)){
+      var peutjouer = "NON";
+      alert("peux pas jouer");
+    }
+}
+
+// ligne bas
+
+ if((nb == 58)||(nb == 59)||(nb == 60)||(nb == 61)||(nb == 62)||(nb == 63)){
+
+ if(plateau[nb-8][1] == RIEN){
+      var peutjouer = "NON";
+      alert("peux pas jouer");
+    }
+}
+
+// ligne bas 2
+
+ if((nb == 50)||(nb == 51)||(nb == 52)||(nb == 53)||(nb == 54)||(nb == 55)){
+
+ if(plateau[nb+8][1] == RIEN){
+      var peutjouer = "NON";
+      alert("peux pas jouer");
+    }else  if(plateau[nb-8][1] == RIEN){
+      var peutjouer = "NON";
+      alert("peux pas jouer");
+    }
+}
 
 
+    if(peutjouer == "OUI"){
+
+      plateau[nb][1] = recupJoueur;
+      caseRemplie++;
+      document.getElementById("case"+nb).style.pointerEvents = "none";
 
 
-         // On gère à droite et à gauche
+    // Vérifications 
+
+         // Droite Gauhce
                 for(var i=1 ; i <9; i++){
-                //if (nb>2 && nb<7){ //(vérifie pour pas dépasser les 8 colonnes)
-
                     if(plateau[nb+2][1] == recupJoueur){ 
                       plateau[nb+1][1] = recupJoueur;
                       caseRemplie++;
                     }
-
                     if(plateau[nb-2][1] == recupJoueur){
                       plateau[nb-1][1] = recupJoueur;
                       caseRemplie++;
                     }
-                //}
-
               }
 
-
-
-
-        // On gère en haut et en bas
-
-           for(var j=1 ; j <9; j++){
-               //if (plateau[nb][0].substring(2) <7 && plateau[nb][0].substring(2) >2){ //(vérifie pour pas dépasser les 8 lignes)
-                //if (nb>2&& nb<7){  
-                 // alert("ok");
-
-                    if(plateau[nb+0.2][1] == recupJoueur){ 
-                      plateau[nb+0.1][1] = recupJoueur;
-                      caseRemplie++;
-                   }
-
-                    if(plateau[nb-0.2][1] == recupJoueur){
-                      plateau[nb-0.1][1] = recupJoueur;
+              // Haut - Bas
+              for(var i=1 ; i <9; i++){
+                    if(plateau[nb+16][1] == recupJoueur){ 
+                      plateau[nb+8][1] = recupJoueur;
                       caseRemplie++;
                     }
-                }
-
+                    if(plateau[nb-16][1] == recupJoueur){
+                      plateau[nb-8][1] = recupJoueur;
+                      caseRemplie++;
+                    }
               }
 
 
-        
-        // On change la couleur des cases
-        mettreAJour();
-        
+              //Diagonale vers le bas
+              for(var i=1 ; i <9; i++){
+                    if(plateau[nb+18][1] == recupJoueur){ 
+                      plateau[nb+9][1] = recupJoueur;
+                      caseRemplie++;
+                    }
+                    if(plateau[nb-18][1] == recupJoueur){
+                      plateau[nb-9][1] = recupJoueur;
+                      caseRemplie++;
+                    }
+              }
+
+
+              // Diagonale vers le haut
+              for(var i=1 ; i <9; i++){
+                    if(plateau[nb+14][1] == recupJoueur){ 
+                      plateau[nb+7][1] = recupJoueur;
+                      caseRemplie++;
+                    }
+                    if(plateau[nb-14][1] == recupJoueur){
+                      plateau[nb-7][1] = recupJoueur;
+                      caseRemplie++;
+                    }
+              }
+
+
         // On change de joueur
         changerJoueur(recupJoueur);
+
+        }else {
+          alert("joue autre part");
+        }
+
+
+    }
+
+        // On change la couleur des cases
+        mettreAJour();
+
+
+
+  // fin du jeu quand toutes les cases sont remplies
+
+    if(caseRemplie >= 64){
+      alert("jeu terminé");
+        for (var z=1; z<65; z++){
+          document.getElementById("case"+z).style.pointerEvents = "none";
+
+          //Definir le gagnant :
+
+          // Compter le nombre de cases remplies pour chaques couleurs
+          for (var v=1; v<65; v++){
+            couleur = "red";
+            if(document.getElementById('case'+z).style.backgroundColor == couleur){
+            
+
+            }
+          }
+
+          // Recupereration de la caloueur ayant le nombre de cases remplies le plus elevée 
+
+
+
+
+          // On définit le gagnant
+
+
+        
+    }else {
+      console.log("jeu incomplet");
+    }
+
+
+        
+        
         
     
 }
